@@ -1,0 +1,71 @@
+{
+    "name": "webaune/laravel-subscriptions",
+    "description": "Laravel Subscriptions is a flexible plans and subscription management system for Laravel, with the required tools to run your SAAS like services efficiently. It's simple architecture, accompanied by powerful underlying to afford solid platform for your business.",
+    "type": "library",
+    "keywords": [
+        "plan",
+        "value",
+        "laravel",
+        "feature",
+        "database",
+        "recurring",
+        "subscription"
+    ],
+    "license": "MIT",
+    "homepage": "https://webaune.com",
+    "support": {
+        "email": "razeek@webaune.com",
+        "issues": "https://github.com/rzksbr-civa/laravel-subscriptions/issues",
+        "source": "https://github.com/rzksbr-civa/laravel-subscriptions",
+        "docs": "https://github.com/rzksbr-civa/laravel-subscriptions/blob/master/README.md"
+    },
+    "authors": [
+        {
+            "name": "Webaune Solutions Pvt Ltd",
+            "homepage": "https://webaune.com",
+            "email": "razeek@webaune.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2.0",
+        "illuminate/console": "^10.0.0 || ^11.0.0",
+        "illuminate/database": "^10.0.0 || ^11.0.0",
+        "illuminate/support": "^10.0.0 || ^11.0.0",
+        "webaune/laravel-support": "^1.0.0",
+        "spatie/eloquent-sortable": "^4.4.0",
+        "spatie/laravel-sluggable": "^3.6.0",
+        "spatie/laravel-translatable": "^6.8.0"
+    },
+    "require-dev": {
+        "codedungeon/phpunit-result-printer": "^0.32.0",
+        "illuminate/container": "^10.0.0 || ^11.0.0",
+        "phpunit/phpunit": "^11.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webaune\\Subscriptions\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Webaune\\Subscriptions\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webaune\\Subscriptions\\Providers\\SubscriptionsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
