@@ -16,7 +16,7 @@ class CreatePlanSubscriptionsTable extends Migration
     {
         Schema::create(config('webaune.subscriptions.tables.plan_subscriptions'), function (Blueprint $table) {
             $table->increments('id');
-            $table->morphs('subscriber');
+            $table->uuidMorphs('subscriber');
             $table->integer('plan_id')->unsigned();
             $table->string('slug');
             $table->json('name');

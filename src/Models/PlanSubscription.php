@@ -95,7 +95,7 @@ class PlanSubscription extends Model
      * {@inheritdoc}
      */
     protected $casts = [
-        'subscriber_id' => 'integer',
+        'subscriber_id' => 'string',
         'subscriber_type' => 'string',
         'plan_id' => 'integer',
         'slug' => 'string',
@@ -153,7 +153,7 @@ class PlanSubscription extends Model
             'description' => 'nullable|string|max:32768',
             'slug' => 'required|alpha_dash|max:150|unique:'.config('webaune.subscriptions.tables.plan_subscriptions').',slug',
             'plan_id' => 'required|integer|exists:'.config('webaune.subscriptions.tables.plans').',id',
-            'subscriber_id' => 'required|integer',
+            'subscriber_id' => 'required|string',
             'subscriber_type' => 'required|string|strip_tags|max:150',
             'trial_ends_at' => 'nullable|date',
             'starts_at' => 'required|date',
